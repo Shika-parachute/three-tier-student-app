@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Student Management System</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,41 +13,152 @@
 
     <div class="container">
 
-        <h1>Student Management System</h1>
+        <header>
+            <div>
+                <p class="tag">THREE-TIER APPLICATION</p>
 
-        <div class="form-box">
+                <h1>Student Management System</h1>
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Student Name"
-            >
+                <p class="subtitle">
+                    Manage student records with a modern cloud-ready application.
+                </p>
+            </div>
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Email"
-            >
+            <div class="status">
+                <span></span>
+                System Online
+            </div>
+        </header>
 
-            <input
-                type="text"
-                id="course"
-                placeholder="Course"
-            >
 
-            <button onclick="addStudent()">
-                Add Student
-            </button>
+        <section class="stats">
 
-        </div>
+            <div class="stat-card">
 
-        <h2>Students</h2>
+                <div class="icon">👨‍🎓</div>
 
-        <div id="studentList">
-            Loading students...
-        </div>
+                <div>
+                    <p>Total Students</p>
+                    <h2 id="studentCount">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">☁️</div>
+
+                <div>
+                    <p>Deployment</p>
+                    <h2>AWS EC2</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="icon">🐳</div>
+
+                <div>
+                    <p>Containerized</p>
+                    <h2>Docker</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="main-grid">
+
+
+            <div class="card form-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <p class="small-title">ADD RECORD</p>
+                        <h2>Add New Student</h2>
+                    </div>
+
+                    <span class="plus">+</span>
+
+                </div>
+
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Student name"
+                >
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email address"
+                >
+
+                <input
+                    id="course"
+                    type="text"
+                    placeholder="Course / Program"
+                >
+
+                <button onclick="addStudent()">
+                    Add Student
+                </button>
+
+            </div>
+
+
+            <div class="card students-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <p class="small-title">DATABASE RECORDS</p>
+                        <h2>Students</h2>
+                    </div>
+
+                    <span
+                        class="count-badge"
+                        id="badgeCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div id="studentList">
+
+                    <p class="empty">
+                        Loading students...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <span>
+                Three-Tier Student Management System
+            </span>
+
+            <span>
+                Docker • MySQL • Node.js • Nginx • AWS EC2
+            </span>
+
+        </footer>
 
     </div>
+
 
     <script src="script.js"></script>
 
